@@ -12,6 +12,8 @@ export const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+        loader: () => fetch("http://localhost:3000/coffees"),
+        HydrateFallback: "",
       },
       {
         path: "addCoffee",

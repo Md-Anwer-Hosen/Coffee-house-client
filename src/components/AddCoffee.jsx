@@ -63,12 +63,12 @@ const AddCoffee = () => {
 
             {/* Chef */}
             <div>
-              <label className="block mb-1 font-semibold">Chef</label>
+              <label className="block mb-1 font-semibold">Price</label>
               <input
                 type="text"
                 placeholder="Enter coffee chef"
                 className="input input-bordered w-full bg-white"
-                name="chef"
+                name="price"
               />
             </div>
 

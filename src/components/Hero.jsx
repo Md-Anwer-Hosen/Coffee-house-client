@@ -22,7 +22,7 @@ const Hero = () => {
               nostalgia back!! Your companion of <br /> every moment!!! Enjoy
               the beautiful moments and make them memorable.
             </p>
-            <button className="bg-[#E3B577] rounded-sm w-fit p-2 mt-5">
+            <button className="bg-[#E3B577] border-[#331A15] rounded-sm font-[rancho] px-3 py-1.5 mt-5 w-fit">
               Learn More
             </button>
           </div>
