@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Left Section */}
           <div>
             <div className="flex items-center mb-4">
-              <h2 className="text-4xl font-bold font-[rancho]">
+              <h2 className="text-4xl font-bold font-[rancho] text-[#331A15]">
                 Espresso Emporium
               </h2>
             </div>
@@ -62,10 +62,10 @@ const Footer = () => {
 
           {/* Right Section (Contact Form) */}
           <div>
-            <h3 className="text-4xl font-bold mb-4 font-[rancho]">
+            <h3 className="text-4xl font-bold mb-4 font-[rancho] text-[#331A15]">
               Connect with Us
             </h3>
-            <form className="space-y-3">
+            <form className="space-y-3 text-black">
               <input
                 type="text"
                 placeholder="Name"

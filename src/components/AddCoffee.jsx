@@ -8,7 +8,6 @@ const AddCoffee = () => {
     const form = e.target;
     const formData = new FormData(form);
     const newCoffee = Object.fromEntries(formData.entries());
-    console.log(newCoffee);
 
     //sent the server-->>
 
@@ -45,12 +44,10 @@ const AddCoffee = () => {
             distribution of letters, as opposed to using Content here.
           </p>
 
-          {/* Form */}
           <form
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
             onSubmit={addCoffee}
           >
-            {/* Name */}
             <div>
               <label className="block mb-1 font-semibold">Name</label>
               <input
@@ -58,10 +55,10 @@ const AddCoffee = () => {
                 placeholder="Enter coffee name"
                 className="input input-bordered w-full bg-white"
                 name="name"
+                required
               />
             </div>
 
-            {/* Chef */}
             <div>
               <label className="block mb-1 font-semibold">Price</label>
               <input
@@ -69,10 +66,10 @@ const AddCoffee = () => {
                 placeholder="Enter coffee chef"
                 className="input input-bordered w-full bg-white"
                 name="price"
+                required
               />
             </div>
 
-            {/* Supplier */}
             <div>
               <label className="block mb-1 font-semibold">Supplier</label>
               <input
@@ -80,10 +77,10 @@ const AddCoffee = () => {
                 placeholder="Enter coffee supplier"
                 className="input input-bordered w-full bg-white"
                 name="supplier"
+                required
               />
             </div>
 
-            {/* Taste */}
             <div>
               <label className="block mb-1 font-semibold">Taste</label>
               <input
@@ -91,10 +88,10 @@ const AddCoffee = () => {
                 placeholder="Enter coffee taste"
                 className="input input-bordered w-full bg-white"
                 name="taste"
+                required
               />
             </div>
 
-            {/* Category */}
             <div>
               <label className="block mb-1 font-semibold">Category</label>
               <input
@@ -102,10 +99,10 @@ const AddCoffee = () => {
                 placeholder="Enter coffee category"
                 className="input input-bordered w-full bg-white"
                 name="category"
+                required
               />
             </div>
 
-            {/* Details */}
             <div>
               <label className="block mb-1 font-semibold">Details</label>
               <input
@@ -113,10 +110,10 @@ const AddCoffee = () => {
                 placeholder="Enter coffee details"
                 className="input input-bordered w-full bg-white"
                 name="details"
+                required
               />
             </div>
 
-            {/* Photo */}
             <div className="md:col-span-2">
               <label className="block mb-1 font-semibold">Photo</label>
               <input
@@ -124,10 +121,10 @@ const AddCoffee = () => {
                 placeholder="Enter photo URL"
                 className="input input-bordered w-full bg-white"
                 name="photo"
+                required
               />
             </div>
 
-            {/* Button */}
             <div className="md:col-span-2">
               <button
                 type="submit"
