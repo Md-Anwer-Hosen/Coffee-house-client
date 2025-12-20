@@ -20,9 +20,12 @@ const SingleProduct = ({ coffee, coffees, setCoffees }) => {
 
         //delete process-->
 
-        fetch(`http://localhost:3000/coffees/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://coffee-store-server-ten-fawn.vercel.app/coffees/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {

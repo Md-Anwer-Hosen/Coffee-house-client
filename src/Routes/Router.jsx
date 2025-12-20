@@ -16,19 +16,23 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/coffees"),
+        loader: () =>
+          fetch("https://coffee-store-server-ten-fawn.vercel.app/coffees"),
       },
       {
         path: "home",
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/coffees"),
+        loader: () =>
+          fetch("https://coffee-store-server-ten-fawn.vercel.app/coffees"),
         HydrateFallback: "",
       },
       {
         path: "coffees/:id",
         element: <CoffeeDetails></CoffeeDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffees/${params.id}`),
+          fetch(
+            `https://coffee-store-server-ten-fawn.vercel.app/coffees/${params.id}`
+          ),
       },
       {
         path: "addCoffee",
@@ -38,7 +42,9 @@ export const router = createBrowserRouter([
         path: "updateCoffee/:id",
         element: <UpdateCoffee />,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffees/${params.id}`),
+          fetch(
+            `https://coffee-store-server-ten-fawn.vercel.app/coffees/${params.id}`
+          ),
       },
       {
         path: "signup",
@@ -51,7 +57,8 @@ export const router = createBrowserRouter([
       {
         path: "users",
         element: <UserTable />,
-        loader: () => fetch("http://localhost:3000/users"),
+        loader: () =>
+          fetch("https://coffee-store-server-ten-fawn.vercel.app/users"),
       },
     ],
   },

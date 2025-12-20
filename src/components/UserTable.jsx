@@ -9,7 +9,7 @@ const UserTable = () => {
   const { deleteOneUser } = useContext(AuthContext);
 
   const handleDelete = (_id) => {
-    fetch(`http://localhost:3000/users/${_id}`, {
+    fetch(`https://coffee-store-server-ten-fawn.vercel.app/users/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

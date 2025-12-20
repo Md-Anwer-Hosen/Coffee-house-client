@@ -22,7 +22,7 @@ const SignIn = () => {
 
         //update user information-->>
 
-        fetch("http://localhost:3000/users", {
+        fetch("https://coffee-store-server-ten-fawn.vercel.app/users", {
           method: "PATCH",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(userInfo),

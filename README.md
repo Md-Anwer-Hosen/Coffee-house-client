@@ -1,16 +1,89 @@
-# React + Vite
+# ☕ Coffee Store – Full Stack Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Coffee Store is a full-stack web application where users can view, add, update, and delete coffee products.
+The project is built using React on the client side and Node.js with Express and MongoDB on the server side.
 
-Currently, two official plugins are available:
+## 🔗 Live Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Client (Firebase): https://coffee-store-auth-5ea79.web.app
+- Server (Vercel): https://coffee-store-server-virid-tau.vercel.app
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- View all coffee products
+- Add new coffee items
+- Update existing coffee information
+- Delete coffee products
+- User management (add, view, delete users)
+- RESTful API
+- Responsive UI
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+- React
+- React Router
+- Firebase Hosting
+- Tailwind CSS
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Vercel
+
+### Tools
+
+- Git & GitHub
+- Vercel CLI
+- Firebase CLI
+
+## 🔌 API Endpoints
+
+### Coffee Routes
+
+- GET /coffees
+- GET /coffees/:id
+- POST /coffees
+- PUT /coffees/:id
+- DELETE /coffees/:id
+
+### User Routes
+
+- GET /users
+- POST /users
+- DELETE /users/:id
+- PATCH /users
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the server root and add:
+
+DB_USER=your_mongodb_username  
+DB_PASSWORD=your_mongodb_password
+
+## 🚀 Run Locally
+
+### Client
+
+```bash
+npm install
+npm run dev
+
+
+npm install
+nodemon index.js
+
+
+## 📁 Project Structure
+
+coffee-store/
+│
+├── client/
+├── server/
+│   ├── index.js
+│   ├── vercel.json
+│   └── package.json
+```
