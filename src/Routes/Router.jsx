@@ -6,6 +6,7 @@ import Home from "../components/Home";
 import CoffeeDetails from "../components/CoffeeDetails";
 import Signup from "../components/Signup";
 import SignIn from "../components/SignIn";
+import UserTable from "../components/UserTable";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ export const router = createBrowserRouter([
       {
         path: "signin",
         element: <SignIn />,
+      },
+      {
+        path: "users",
+        element: <UserTable />,
+        loader: () => fetch("http://localhost:3000/users"),
       },
     ],
   },

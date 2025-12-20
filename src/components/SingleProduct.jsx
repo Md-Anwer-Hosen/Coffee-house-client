@@ -34,8 +34,8 @@ const SingleProduct = ({ coffee, coffees, setCoffees }) => {
 
               //update ui---->
 
-              const remainningCoffees = coffees.filter((c) => c._id !== _id);
-              setCoffees(remainningCoffees);
+              const remainingCoffees = coffees.filter((c) => c._id !== _id);
+              setCoffees(remainingCoffees);
             }
           });
       }

@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
+import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 
 const Signup = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
 
-    const { email, password, ...userProfile } = Object.fromEntries(
+    const { email, password, ...restFormData } = Object.fromEntries(
       formData.entries()
     );
 
@@ -17,7 +20,33 @@ const Signup = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result);
+        console.log(result.user);
+        const userProfile = {
+          email,
+          ...restFormData,
+          creationTime: result.user?.metadata?.creationTime,
+          lastSignInTime: result.user?.metadata?.lastSignInTime,
+        };
+
+        //save userinfo in database
+
+        fetch("http://localhost:3000/users", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(userProfile),
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            console.log("after insert data :", result);
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "User SignUp Successful",
+              showConfirmButton: false,
+              timer: 1300,
+            });
+            navigate("/home");
+          });
       })
       .catch((err) => console.log(err));
   };
